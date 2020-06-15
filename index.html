@@ -161,7 +161,19 @@
 
       function offeredOrNot() {
 	      
-	      jQuery('.LPMcontainer').css('z-index', 15)
+	      if(window.innerWidth > 1025){
+		      jQuery('.LPMcontainer').css('z-index', 100)
+	      } else{
+		      jQuery('.LPMcontainer').css('z-index', 15)
+	      }
+	      
+	      jQuery(window).resize(function() {
+		      if(window.innerWidth > 1025){
+			      jQuery('.LPMcontainer').css('z-index', 100)
+		      } else{
+			      jQuery('.LPMcontainer').css('z-index', 15)
+		      }
+	      });
 	      
         jQuery("#showContainer_lp").click(function () {
           jQuery(".showContainer_lp").css("visibility", "hidden");
