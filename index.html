@@ -161,6 +161,10 @@
 
       function offeredOrNot() {
 	      
+	      if(jQuery("#productDetailsNextButton").length){
+		      jQuery(".showContainer_lp").css("margin-top", "10px");
+	      }
+	      
 	      if(window.innerWidth > 1025){
 		      jQuery('.LPMcontainer').css('z-index', 100)
 	      } else{
