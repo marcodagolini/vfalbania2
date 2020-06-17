@@ -161,9 +161,7 @@
 
       function offeredOrNot() {
 	      
-	      if(jQuery("#productDetailsNextButton").length){
-		      jQuery(".showContainer_lp").css("margin-top", "10px");
-	      }
+
 	      
 	      if(window.innerWidth > 1025){
 		      jQuery('.LPMcontainer').css('z-index', 100)
@@ -171,11 +169,28 @@
 		      jQuery('.LPMcontainer').css('z-index', 15)
 	      }
 	      
+	      if(jQuery("#productDetailsNextButton").length){
+		      if(window.innerWidth < 640){
+			      jQuery(".showContainer_lp").css("margin-top", "-9px");
+		      } else{
+			      jQuery(".showContainer_lp").css("margin-top", "26px");
+		      }
+	      }
+	      
+
+	      
 	      jQuery(window).resize(function() {
 		      if(window.innerWidth > 1025){
 			      jQuery('.LPMcontainer').css('z-index', 100)
 		      } else{
 			      jQuery('.LPMcontainer').css('z-index', 15)
+		      }
+		      if(jQuery("#productDetailsNextButton").length){
+			      if(window.innerWidth < 640){
+				      jQuery(".showContainer_lp").css("margin-top", "-9px");
+			      } else{
+				      jQuery(".showContainer_lp").css("margin-top", "26px");
+			      }
 		      }
 	      });
 	      
