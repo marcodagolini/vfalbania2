@@ -171,9 +171,9 @@
 	      
 	      if(jQuery("#productDetailsNextButton").length){
 		      if(window.innerWidth < 640){
-			      jQuery(".showContainer_lp").css("bottom", "109px");
+			      jQuery(".engagement_lp").css("bottom", "109px");
 		      } else{
-			      jQuery(".showContainer_lp").css("bottom", "74px");
+			      jQuery(".engagement_lp").css("bottom", "74px");
 		      }
 	      }
 	      
@@ -187,9 +187,9 @@
 		      }
 		      if(jQuery("#productDetailsNextButton").length){
 			      if(window.innerWidth < 640){
-				      jQuery(".showContainer_lp").css("margin-top", "-9px");
+				      jQuery(".engagement_lp").css("bottom", "109px");
 			      } else{
-				      jQuery(".showContainer_lp").css("margin-top", "26px");
+				      jQuery(".engagement_lp").css("bottom", "74px");
 			      }
 		      }
 	      });
@@ -197,6 +197,7 @@
         jQuery("#showContainer_lp").click(function () {
           jQuery(".showContainer_lp").css("visibility", "hidden");
           jQuery(".container_disclaimer_lp").css("visibility", "visible");
+		jQuery(".engagement_lp").css("bottom", "74px");
 		jQuery(".engagement_lp").css("width", "370px");
 		jQuery(".engagement_lp").css("height", "220px");
         });
@@ -221,6 +222,13 @@
           jQuery(".container_disclaimer_lp").css("visibility", "hidden");
 		jQuery(".engagement_lp").css("width", "100px");
 		jQuery(".engagement_lp").css("height", "100px");
+		if(jQuery("#productDetailsNextButton").length){
+		      if(window.innerWidth < 640){
+			      jQuery(".engagement_lp").css("bottom", "109px");
+		      } else{
+			      jQuery(".engagement_lp").css("bottom", "74px");
+		      }
+		}
         });
       }
 
